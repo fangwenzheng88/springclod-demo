@@ -1,0 +1,22 @@
+server:
+  port: 8888
+  
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file:D:/springcloud/demo-cloud/configRepo
+  security:
+    user:
+      password: root
+      name: root
+    basic:
+      enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka/

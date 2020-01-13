@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka/
+server:
+  port: 8769
+spring:
+  application:
+    name: zuulserver
+  cloud:
+    config:
+      # uri: http://localhost:8888
+      discovery:
+        enabled: true
+        service-id: configserver  # 注册中心的服务名
+      profile: dev
+      username: root
+      password: root
